@@ -48,11 +48,24 @@
                     <li>Wasted Pizza</li>
                     <li>Bad Guys (or Kats ;)</li>
                 </ol>
+
             <!-- Building Web Forms -->
-            <!-- Input Element with placeholder text-->
-            
+            <!-- Input Element with placeholder text || Adding the required field will make it mandatory to enter text into the box -->
             <form action="/documents">
-            <input type="text" placeholder="This is PlaceHolder Text">
+            <input type="text" required placeholder="This is PlaceHolder Text">
+            <p>
+            <!-- Radio Buttons. All related radio buttons should have the same name attribute -->
+            <label for="indoor">
+                <input type="radio" name="indoor-outdoor">Indoor
+            </label>
+            </p>
+            <label for="outdoor">
+                <input type="radio" name="indoor-outdoor">Outdoor
+            </label>
+            <p>
+            <!-- Adding a Button -->
+            <button type"submit">Submit Photos Here :)</button>
+            </p>
             </form>
         </main>
 

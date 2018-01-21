@@ -27,10 +27,18 @@
              }
 
              h2 {
-                 /*GOOGLE FONT font-family: family_name, generic_name. generic name is optional and is a fallback in case the specified font is not available*/
+                 /*GOOGLE FONT font-family: family_name, generic_name. generic name is optional and is a fallback in case the specified font is not available, 
+                 you can add more than one, this is called degrading*/
                  /* family names are case sensitive and must be surrounded with quotation marks is a space is present in the word */
                  font-family: 'Lobster Two', cursive;
              }
+
+             .smaller-image {
+                 /* Specifies an image's wudth by pixels */
+                 width: 100px;
+             }
+
+             /* Using CSS Properties like style, color and width */
         </style>
 
     </head>
@@ -48,7 +56,7 @@
             
             <p> View more <a href="https://www.google.tt/search?q=swat+kats+images&dcr=0&tbm=isch&tbo=u&source=univ&sa=X&ved=0ahUKEwijis7Pgd_YAhVEWqwKHfxPAF4QsAQIJA&biw=1918&bih=949" target="_blank">Swat Kats Photos</a> </p>
             
-            <a href="#" target="_blank"><img src="https://img00.deviantart.net/4e60/i/2010/262/f/7/swat_kats_by_blackwingedheart87-d2z3o0e.png" alt="Swat Cats!!!" title="Swat Cats, bruv ;)"></a>
+            <a href="#" target="_blank"><img src="https://img00.deviantart.net/4e60/i/2010/262/f/7/swat_kats_by_blackwingedheart87-d2z3o0e.png" class="smaller-image" alt="Swat Cats!!!" title="Swat Cats, bruv ;)"></a>
             
           
             <div>
@@ -72,29 +80,29 @@
             <form action="/documents">
                 
                 <label for="indoor">
-                        <input type="radio" name="indoor-outdoor" checked>Indoor
-                    </label>
+                    <input type="radio" name="indoor-outdoor" checked>Indoor
+                </label>
 
-                    <label for="outdoor">
-                        <input type="radio" name="indoor-outdoor" >Outdoor
-                    </label>
+                <label for="outdoor">
+                    <input type="radio" name="indoor-outdoor" >Outdoor
+                </label>
 
             <br>
 
                 <input type="text" required placeholder="This is PlaceHolder Text">
 
-                <button type"submit"> Submit Photos Here </button>
+                <button type="submit"> Submit Photos Here </button>
 
             <br>
 
                 <label>
-                    <input type="checkbox" name="personality" checked> Loving of Pizza </label>
+                    <input type="checkbox" name="personality" checked> Loving of Pizza
                 </label>
                 
                 <br>
 
                 <lable>
-                    <input type="checkbox" name"personality" checked> Correctness </lable>
+                    <input type="checkbox" name="personality" checked> Correctness
                 </lable>
             
             </form>

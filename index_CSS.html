@@ -34,8 +34,7 @@
              }
 
              .smaller-image {
-                 /* Specifies an image's wudth by pixels */
-                 width: 100px;
+                 width: 100px; /* Specifies an image's width by pixels */
              }
 
              /* Using CSS border Properties like style, color and width */
@@ -43,6 +42,18 @@
                  border-color: red;
                  border-width: 10px;
                  border-style: solid;
+                 /* border-radius: 10px;  rounds an image's border */
+                 border-radius: 50%; /* Can also be done using a Percentage value */
+             }
+
+             /* Background */
+             .silver-background {
+                 background-color: silver;
+             }
+            
+            /* when referencing the id class use the # symbol */
+             #cat-photo-form {
+                 background-color: green;
              }
         </style>
 
@@ -64,8 +75,8 @@
             <a href="#" target="_blank"><img src="https://img00.deviantart.net/4e60/i/2010/262/f/7/swat_kats_by_blackwingedheart87-d2z3o0e.png" class="smaller-image thick-red-border" alt="Swat Cats!!!" title="Swat Cats, bruv ;)"></a>
             
           
-            <div>
-                <h3>Things Cats Love</h3>
+            <div class="silver-background">
+                <p>Things Cats Love<p>
                     <ul>
                         <li>Pizza</li>
                         <li>Jets</li>
@@ -73,7 +84,7 @@
                     </ul>
  
 
-                <h3>Things Cats Hate</h3>
+                <p>Things Cats Hate</p>
                     <ol>
                         <li>Ulysses Feral</li>
                         <li>Wasted Pizza</li>
@@ -82,7 +93,7 @@
 
             </div>
 
-            <form action="/documents">
+            <form id="cat-photo-form" action="/documents">
                 
                 <label for="indoor">
                     <input type="radio" name="indoor-outdoor" checked>Indoor

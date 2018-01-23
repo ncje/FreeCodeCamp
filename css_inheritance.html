@@ -2,7 +2,7 @@
 
 <html>
     <head> 
-        <title>CSS Inheritance</title>
+        <title>CSS Inheritance - Basic CSS</title>
 
         <style>
             body {
@@ -12,7 +12,7 @@
             }
 
             .pink-text {
-                color: pink;
+                color: pink !important; /* Use !important to ovveride all other CSS declarations */
             }
 
             /* the order of the class declarations in the <style> section are what is important. The second declaration will always take precedence over the first. */
@@ -29,7 +29,8 @@
     </head>
 
     <body>
-        <!-- CSS - Classes can override elements -->
-        <h1 id="orange-text" class="pink-text blue-text"> Hello, World </h1>
+        <!-- CSS - Classes can override elements 
+            Inline Styles override all CSS declarations in the style element-->
+        <h1 id="orange-text" class="pink-text blue-text" style="color: white;"> Hello, World </h1>
     </body>
 </html>

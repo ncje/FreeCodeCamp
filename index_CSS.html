@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+    <head> 
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
+        
+        <title>SwatKatsPhotoApp</title>
+
+        <!-- A better way to implement CSS than inline. its IMPORTANT to surround values in curly brackets -->
+        <style>
+            /*h2 {
+                color: red;
+            }*/
+            
+            /*you can create a class to apply to elements to style them.*/
+            .red-text {
+                 color: red;
+             }
+
+             p {
+                 /*Changing Font Size*/
+                 font-size: 16px;
+
+                 /*Changing Font*/
+                 font-family: Monospace;
+             }
+
+             h2 {
+                 /*GOOGLE FONT font-family: family_name, generic_name. generic name is optional and is a fallback in case the specified font is not available, 
+                 you can add more than one, this is called degrading*/
+                 /* family names are case sensitive and must be surrounded with quotation marks is a space is present in the word */
+                 font-family: 'Lobster Two', cursive;
+             }
+
+             .smaller-image {
+                 width: 100px; /* Specifies an image's width by pixels */
+             }
+
+             /* Using CSS border Properties like style, color and width */
+             .thick-red-border {
+                 border-color: red;
+                 border-width: 10px;
+                 border-style: solid;
+                 /* border-radius: 10px;  rounds an image's border */
+                 border-radius: 50%; /* Can also be done using a Percentage value */
+             }
+
+             /* Background */
+             .silver-background {
+                 background-color: silver;
+             }
+            
+            /* when referencing the id class use the # symbol */
+             #cat-photo-form {
+                 background-color: green;
+             }
+        </style>
+
+    </head>
+
+    <body> 
+        
+        <!-- Inline Style (Inline CSS)
+        <h2 style="color: red;">SwatKatsPhotoApp</h2> -->
+        
+        <!--class to implement a class from CSS -->
+        <h2 class="red-text"> SwatKatsPhotoApp </h2>
+        
+        <main>
+            
+            
+            <p> View more <a href="https://www.google.tt/search?q=swat+kats+images&dcr=0&tbm=isch&tbo=u&source=univ&sa=X&ved=0ahUKEwijis7Pgd_YAhVEWqwKHfxPAF4QsAQIJA&biw=1918&bih=949" target="_blank">Swat Kats Photos</a> </p>
+            
+            <a href="#" target="_blank"><img src="https://img00.deviantart.net/4e60/i/2010/262/f/7/swat_kats_by_blackwingedheart87-d2z3o0e.png" class="smaller-image thick-red-border" alt="Swat Cats!!!" title="Swat Cats, bruv ;)"></a>
+            
+          
+            <div class="silver-background">
+                <p>Things Cats Love<p>
+                    <ul>
+                        <li>Pizza</li>
+                        <li>Jets</li>
+                        <li>PizzaS!!</li>
+                    </ul>
+ 
+
+                <p>Things Cats Hate</p>
+                    <ol>
+                        <li>Ulysses Feral</li>
+                        <li>Wasted Pizza</li>
+                        <li>Bad Guys (or Kats ;)</li>
+                    </ol>
+
+            </div>
+
+            <form id="cat-photo-form" action="/documents">
+                
+                <label for="indoor">
+                    <input type="radio" name="indoor-outdoor" checked>Indoor
+                </label>
+
+                <label for="outdoor">
+                    <input type="radio" name="indoor-outdoor" >Outdoor
+                </label>
+
+            <br>
+
+                <input type="text" required placeholder="This is PlaceHolder Text">
+
+                <button type="submit"> Submit Photos Here </button>
+
+            <br>
+
+                <label>
+                    <input type="checkbox" name="personality" checked> Loving of Pizza
+                </label>
+                
+                <br>
+
+                <lable>
+                    <input type="checkbox" name="personality" checked> Correctness
+                </lable>
+            
+            </form>
+
+        </main>
+
+        <footer id="footer">Copyright SwatKatsPhotoApp</footer>
+    
+    </body>
+
+</html>

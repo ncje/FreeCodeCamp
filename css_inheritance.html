@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head> 
+        <title>CSS Inheritance</title>
+
+        <style>
+            body {
+                background-color: black;
+                color: green;
+                font-family: MonoSpace;
+            }
+
+            .pink-text {
+                color: pink;
+            }
+
+            /* the order of the class declarations in the <style> section are what is important. The second declaration will always take precedence over the first. */
+            .blue-text {
+                color: blue;
+            }
+
+            /* It doesn't matter whether you declare this CSS above or below pink-text class, since id attribute will always take precedence.*/
+            #orange-text {
+                color: orange;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <!-- CSS - Classes can override elements -->
+        <h1 id="orange-text" class="pink-text blue-text"> Hello, World </h1>
+    </body>
+</html>

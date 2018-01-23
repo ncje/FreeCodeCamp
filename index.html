@@ -1,23 +1,104 @@
+<!DOCTYPE html> <!-- Tells the browser what version of HTML your page is using -->
 <html>
 
-    <head>
+    <head> <!-- Any markup with information about your page would go into the head tag. Metadata elements, such as link, meta, title, and style usually go here -->
 
         <title>Test Site</title>
 
     </head>
 
-    <body>
-
-        <h2>CatPhotoApp</h2>
-
+    <body> <!-- any markup with the content of the page what displays for a user would go into the body tag -->
+        
+        <h2>SwatKatsPhotoApp</h2>
+        
         <main> <!-- is an HTML5 tag that helps search engines and other developers find the main content of your page. -->
 
-            <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the 
-            red dot, hairball run catnip eat the grass sniff.</p>
-            <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip 
-            scratched.</p>
+            <a href="#" target="_blank"><img src="https://img00.deviantart.net/4e60/i/2010/262/f/7/swat_kats_by_blackwingedheart87-d2z3o0e.png" alt="Swat Cats!!!" title="Swat Cats, bruv ;)"></a>
+            
+            <!-- To create a dead link place a # symbol in the href tag -->
+            <p> View more <a href="https://www.google.tt/search?q=swat+kats+images&dcr=0&tbm=isch&tbo=u&source=univ&sa=X&ved=0ahUKEwijis7Pgd_YAhVEWqwKHfxPAF4QsAQIJA&biw=1918&bih=949" target="_blank">Swat Kats Photos</a> </p>
+            
+            <!-- <a href="#footer">Jump to Bottom</a> -->
 
+            <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat 
+                the grass sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy 
+                fur catnip scratched. Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, 
+                hairball run catnip eat the grass sniff.</p>
+            
+            <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched. 
+                Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat 
+                the grass sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur 
+                catnip scratched.</p>
+            
+            <p>Meowwww loved it, hated it, loved it, hated it yet spill litter box, scratch at owner, destroy all furniture, especially couch or lay 
+                on arms while you're using the keyboard. Missing until dinner time toy mouse squeak roll over. With tail in the air lounge in doorway. 
+                Man running from cops stops to pet cats, goes to jail.</p>
+            
+            <!-- the <div> tag is basically a container -->
+            <div>
+                <h3>Things Cats Love</h3>
+                    <!-- Bullet Point List -->
+                    <ul>
+                        <li>Pizza</li>
+                        <li>Jets</li>
+                        <li>PizzaS!!</li>
+                    </ul>
+                    <!-- END -->
+
+                <h3>Things Cats Hate</h3>
+                    <!-- Numbered List -->
+                    <ol>
+                        <li>Ulysses Feral</li>
+                        <li>Wasted Pizza</li>
+                        <li>Bad Guys (or Kats ;)</li>
+                    </ol>
+                    <!-- END -->
+            </div>
+            <!-- END -->
+
+            <!-- Building Web Forms -->
+
+            <!-- Input Element with placeholder text || Adding the required field will make it mandatory to enter text into the box -->
+            <form action="/documents">
+                
+                <!-- Radio Buttons. All related radio buttons should have the same name attribute -->
+                <label for="indoor">
+                        <input type="radio" name="indoor-outdoor" checked>Indoor
+                    </label>
+                    <!-- END -->
+
+                    <label for="outdoor">
+                        <input type="radio" name="indoor-outdoor" >Outdoor
+                    </label>
+                    <!-- END -->
+
+            <br> <!-- line break -->    
+
+                <input type="text" required placeholder="This is PlaceHolder Text">
+
+                <!-- Button -->
+                <button type"submit"> Submit Photos Here </button>
+                <!-- END -->
+
+            <br> <!-- Line Break -->
+
+                <!-- Checkbox, must be in its own label element and should have the same name if they belong to a group -->
+                <!-- used checked to have checkboxes and radio buttons selected by default -->
+                <label>
+                    <input type="checkbox" name="personality" checked> Loving of Pizza </label>
+                </label>
+                
+                <br>
+
+                <lable>
+                    <input type="checkbox" name"personality" checked> Correctness </lable>
+                </lable>
+            
+            </form>
+            <!-- END -->
         </main>
+
+        <footer id="footer">Copyright SwatKatsPhotoApp</footer>
     
     </body>
 

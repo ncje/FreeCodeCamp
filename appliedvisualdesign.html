@@ -1,0 +1,94 @@
+<!-- This section of the curriculum focuses on Applied Visual Design. The first group of challenges build on the given card layout to show 
+    a number of core principles.
+
+    You can specify the width of an element using the width property in CSS. Values can be given in relative length units (such as em), 
+    absolute length units (such as px), or as a percentage of its containing parent element 
+
+    You can specify the height of an element using the height property in CSS, similar to the width property. see line 19
+
+    Strong Tag: makes content bold. see line 52, similar to font-weight: bold; in CSS. See line 58.
+
+    <u> tag to underline text similar to text-decoration: underline; in CSS. See line 58.
+        
+    <em> to Italicize text, similar to font-style: italic; in CSS. See line 58.
+        
+    <del> to strikethrough text, similar to text-decoration: line-through; in CSS. See line 57
+        
+    You can use the <hr> tag to add a horizontal line across the width of its containing element. See line 62 
+
+    Instead of adjusting your overall background or the color of the text to make the foreground easily readable, you can add a background-color to the element 
+    holding the text you want to emphasize. This challenge uses rgba() instead of hex codes or normal rgb(). The RGB values can range from 0 to 255. 
+    The alpha value can range from 1, which is fully opaque or a solid color, to 0, which is fully transparent or clear. rgba() is great to use in this case, 
+    as it allows you to adjust the opacity. This means you don't have to completely block out the background. 
+
+    The box-shadow property takes values for offset-x (how far to push the shadow horizontally from the element), offset-y (how far to push the shadow vertically
+    from the element), blur-radius, spread-radius and a color value, in that order. The blur-radius and spread-radius values are optional.-->
+
+    
+
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Applied Visual Design</title>
+
+        <style>
+            h4 { 
+                text-align: center;
+                padding: 10px;
+                background-color: rgba(45, 45, 45, 0.1);
+                font-size: 27px;
+                text-transform: uppercase; /* transforms the text into uppercase, lowercase, capatilize, initial, inherit, none */
+                font-weight: 800; /* allows you to set how think the characters should be */
+            }
+
+            p {
+                text-align: justify;
+            }
+
+            .links {
+                margin-right: 20px;
+                opacity: 0.7; /* opacity ranges from 0 (Completely transparent) to 1 (not transparent at all) values in between would be 0.1, 0.2...etc. */
+            }
+
+            .fullCard {
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                margin: 10px 5px;
+                padding: 4px;
+                width: 245px;
+            }
+
+            .cardContent {
+                padding: 10px;
+            } 
+            
+            #thumbnail {
+                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            }
+
+            .cardText {
+                margin-bottom: 30px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <div class="fullCard" id="thumbnail">
+                <div class="cardContent">
+                    <div class="cardText">
+                        <h4><del>Google</del> Alphabet</h4>
+                        <hr>
+                        <em><p>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <stong>Stanford University.</stong></p></em>
+                    </div>
+                    <div class="cardLinks">
+                        <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a>
+                        <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

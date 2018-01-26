@@ -22,7 +22,9 @@
     as it allows you to adjust the opacity. This means you don't have to completely block out the background. 
 
     The box-shadow property takes values for offset-x (how far to push the shadow horizontally from the element), offset-y (how far to push the shadow vertically
-    from the element), blur-radius, spread-radius and a color value, in that order. The blur-radius and spread-radius values are optional.-->
+    from the element), blur-radius, spread-radius and a color value, in that order. The blur-radius and spread-radius values are optional.
+
+    A pseudo-class is a keyword that can be added to selectors, in order to select a specific state of the element. See Line 39.-->
 
     
 
@@ -34,6 +36,10 @@
         <title>Applied Visual Design</title>
 
         <style>
+            /* the styling of an anchor tag can be changed for its hover state using the :hover pseudo-class selector. */
+            a:hover {
+                color: rgb(228, 17, 17);
+            }
             h4 { 
                 text-align: center;
                 padding: 10px;
@@ -45,6 +51,7 @@
 
             p {
                 text-align: justify;
+                line-height: 25px; /* line-height increases the amount of virtual space between each line */
             }
 
             .links {

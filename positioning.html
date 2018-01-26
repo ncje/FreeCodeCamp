@@ -1,3 +1,11 @@
+<!-- The next layout scheme that CSS offers is the fixed position, which is a type of absolute positioning that locks an element relative to the 
+    browser window. Similar to absolute positioning, it's used with the CSS offset properties and also removes the element from the normal flow of 
+    the document. Other items no longer "realize" where it is positioned, which may require some layout adjustments elsewhere.One key difference from
+    the absolute position is that the element won't move when the user scrolls. -->
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,6 +14,9 @@
 
         <style>
             #navbar {
+                position: fixed;
+                top: 0px;
+                left: 0px;
                 width: 100%;
                 background-color: #767676;
             }
@@ -22,6 +33,11 @@
 
             a {
                 text-decoration: none;
+            }
+
+            h1 {
+                position: relative;
+                top: 10px;
             }
         </style>
     </head>

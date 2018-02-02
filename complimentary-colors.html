@@ -1,26 +1,32 @@
-<!-- Color theory and its impact on design is a deep topic and only the basics are covered in the following challenges. 
-    On a website, color can draw attention to content, evoke emotions, or create visual harmony. Using different 
-    combinations of colors can really change the look of a website, and a lot of thought can go into picking a color 
-    palette that works with your content. The color wheel is a useful tool to visualize how colors relate to each other - 
-    it's a circle where similar hues are neighbors and different hues are farther apart. When two colors are opposite each 
-    other on the wheel, they are called complementary colors. They have the characteristic that if they are combined, 
-    they "cancel" each other out and create a gray color. However, when placed side-by-side, these colors appear more 
+<!-- Color theory and its impact on design is a deep topic and only the basics are covered in the following challenges.
+    On a website, color can draw attention to content, evoke emotions, or create visual harmony. Using different
+    combinations of colors can really change the look of a website, and a lot of thought can go into picking a color
+    palette that works with your content. The color wheel is a useful tool to visualize how colors relate to each other -
+    it's a circle where similar hues are neighbors and different hues are farther apart. When two colors are opposite each
+    other on the wheel, they are called complementary colors. They have the characteristic that if they are combined,
+    they "cancel" each other out and create a gray color. However, when placed side-by-side, these colors appear more
     vibrant and produce a strong visual contrast
 
 
-    Colors have several characteristics including hue, saturation, and lightness. CSS3 introduced the hsl() property as an 
+    Colors have several characteristics including hue, saturation, and lightness. CSS3 introduced the hsl() property as an
     alternative way to pick a color by directly stating these characteristics.
-    
-    Hue is what people generally think of as 'color'. If you picture a spectrum of colors starting with red on the left, 
-    moving through green in the middle, and blue on right, the hue is where a color fits along this line. In hsl(), 
-    hue uses a color wheel concept instead of the spectrum, where the angle of the color on the circle is given as a value 
+
+    Hue is what people generally think of as 'color'. If you picture a spectrum of colors starting with red on the left,
+    moving through green in the middle, and blue on right, the hue is where a color fits along this line. In hsl(),
+    hue uses a color wheel concept instead of the spectrum, where the angle of the color on the circle is given as a value
     between 0 and 360.
-    
-    Saturation is the amount of gray in a color. A fully saturated color has no gray in it, and a minimally saturated color 
+
+    Saturation is the amount of gray in a color. A fully saturated color has no gray in it, and a minimally saturated color
     is almost completely gray. This is given as a percentage with 100% being fully saturated.
 
-    Lightness is the amount of white or black in a color. A percentage is given ranging from 0% (black) to 100% (white), 
-    where 50% is the normal color. See Line 34 for Example-->
+    Lightness is the amount of white or black in a color. A percentage is given ranging from 0% (black) to 100% (white),
+    where 50% is the normal color. See Line * for Example
+
+    The hsl() option in CSS also makes it easy to adjust the tone of a color. Mixing white with a pure hue creates a tint 
+    of that color, and adding black will make a shade. Alternatively, a tone is produced by adding gray or by both tinting 
+    and shading. Recall that the 's' and 'l' of hsl() stand for saturation and lightness, respectively. The saturation percent 
+    changes the amount of gray and the lightness percent determines how much white or black is in the color. This is useful when
+    you have a base hue you like, but need different variations of it.-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,28 +35,74 @@
         <title>Colors - Applied Visual Design</title>
 
         <style>
-            body {
-                /* background-color: #FFFFFF; */
+            /* body {
+                background-color: #FFFFFF;
                 background-color: hsl(300, 100%, 50%);
-            }
+            } */
             .blue {
-                /* background-color: blue; */
-                background-color: hsl(240, 100%, 50%);
+                /* background-color: blue;
+                background-color: hsl(240, 100%, 50%);  */
+                background: linear-gradient(90deg, red, yellow, rgb(204, 204, 255));
             }
             .yellow {
-                /* background-color: yellow; */
-                background-color: hsl(60, 100%, 50%);
+                /* background-color: yellow;
+                background-color: hsl(60, 100%, 50%); */
+                background: linear-gradient(45deg, blue,blueviolet, rgb(204, 204, 255));
+                color: white;
             }
             div {
-                display: inline-block; /* inline-block elements are like inline elements but they can have a width and a height. */
-                height: 100px;
-                width: 100px;
+                /* display: inline-block; inline-block elements are like inline elements but they can have a width and a height */
+                padding: 30px;
+                /* height: 100%;
+                width: 100%; */
+            }
+
+                        header {
+                background-color: hsl(180, 90%, 35%);
+                color: #FFFFFF;
+            }
+            
+            nav {
+                background-color: hsl(180, 80%, 25%);
+            }
+            
+            h1 {
+                text-indent: 10px;
+                padding-top: 10px;
+            }
+            
+            nav ul {
+                margin: 0px;
+                padding: 5px 0px 5px 30px;
+            }
+            
+            nav li {
+                display: inline;
+                margin-right: 20px;
+            }
+            
+            a {
+                text-decoration: none;
+                color: inherit;
             }
         </style>
+    </head>
 
         <body>
-            <div class="blue"></div>
-            <div class="yellow"></div>
+            <header>
+                <h1>Cooking with FCC!</h1>
+                <nav>
+                    <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Classes</a></li>
+                    <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <div class="blue">90 Degree Gradient</div>
+                <div class="yellow">45 Degree Gradient</div>
+            </main>
         </body>
-    </head>
 </html>

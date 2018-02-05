@@ -34,7 +34,22 @@
 
     The first argument specifies the direction from which color transition starts - it can be stated as a degree, where 90deg makes
     a vertical gradient and 45deg is angled like a backslash. The following arguments specify the order of colors used in the 
-    gradient.-->
+    gradient.
+
+    USE CSS LINEAR GRADIENT TO CREATE A STRIPED ELEMENT
+    The repeating-linear-gradient() function is very similar to linear-gradient() with the major difference that it repeats the 
+    specified gradient pattern. repeating-linear-gradient() accepts a variety of values, but for simplicity, you'll work with an 
+    angle value and color stop values in this challenge.
+    The angle value is the direction of the gradient. Color stops are like width values that mark where a transition takes place, 
+    and are given with a percentage or a number of pixels.
+    In the example demonstrated in the code editor, the gradient starts with the color yellow at 0 pixels which blends into the 
+    second color blue at 40 pixels away from the start. Since the next color stop is also at 40 pixels, the gradient immediately 
+    changes to the third color green, which itself blends into the fourth color value red as that is 80 pixels away from the 
+    beginning of the gradient.
+
+    TRANSFORM SCALE PROPERTY TO CHANGE THE SIZE OF AN ELEMENT
+    To change the scale of an element, CSS has the transform property, along with its scale() function. The following code example 
+    doubles the size of all the paragraph elements on the page:-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,24 +58,63 @@
         <title>Colors - Applied Visual Design</title>
 
         <style>
-            /* body {
-                background-color: #FFFFFF;
-                background-color: hsl(300, 100%, 50%);
-            } */
+            body {
+                /* background-color: #FFFFFF;
+                background-color: hsl(300, 100%, 50%); */
+                background: url("https://i.imgur.com/MJAkxbh.png"); /*adding a background*/
+            }
             .blue {
                 /* background-color: blue;
                 background-color: hsl(240, 100%, 50%);  */
-                background: linear-gradient(90deg, red, yellow, rgb(204, 204, 255));
+                background: linear-gradient(
+                    35deg, 
+                    #CCFFFF, 
+                    #FFCCCC);
             }
             .yellow {
                 /* background-color: yellow;
                 background-color: hsl(60, 100%, 50%); */
-                background: linear-gradient(45deg, blue,blueviolet, rgb(204, 204, 255));
+                background: linear-gradient(
+                    135deg, 
+                    blue,
+                    blueviolet, 
+                    rgb(204, 204, 255)
+                    );
                 color: white;
+            }
+            .striped {
+                background: repeating-linear-gradient(
+                    45deg,
+                    yellow 0px,
+                    yellow 40px,
+                    black 40px,
+                    black 80px
+                    );
+                color: gray;
+            }
+            .ball { 
+                width: 40px;
+                height: 40px;
+                margin: 50 auto;
+                position: fixed;
+                background: linear-gradient(
+                  35deg,
+                  #ccffff,
+                  #ffcccc
+                );
+                border-radius: 50%;
+            }
+            #ball1 {
+                left:20%;
+            }
+            #ball2 {
+                left:65%;
+                transform: scale(1.5);
+                
             }
             div {
                 /* display: inline-block; inline-block elements are like inline elements but they can have a width and a height */
-                padding: 30px;
+                padding: 100px;
                 /* height: 100%;
                 width: 100%; */
             }
@@ -111,6 +165,9 @@
             <main>
                 <div class="blue">90 Degree Gradient</div>
                 <div class="yellow">45 Degree Gradient</div>
+                <div class="striped">Striped Element</div>
+                <div class="ball" id="ball1">Scale Property</div>
+                <div class="ball" id="ball2">Scale Property</div>
             </main>
         </body>
 </html>
